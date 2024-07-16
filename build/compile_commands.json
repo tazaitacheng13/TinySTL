@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/Cplus/MiniSTL/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/MiniSTL.dir/alloc.cpp.o -c /home/Cplus/MiniSTL/alloc.cpp",
+  "file": "/home/Cplus/MiniSTL/alloc.cpp"
+},
+{
+  "directory": "/home/Cplus/MiniSTL/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/MiniSTL.dir/test.cpp.o -c /home/Cplus/MiniSTL/test.cpp",
+  "file": "/home/Cplus/MiniSTL/test.cpp"
+},
+{
+  "directory": "/home/Cplus/MiniSTL/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/MiniSTL.dir/test_vector.cpp.o -c /home/Cplus/MiniSTL/test_vector.cpp",
+  "file": "/home/Cplus/MiniSTL/test_vector.cpp"
+}
+]

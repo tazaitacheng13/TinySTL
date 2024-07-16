@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/MiniSTL.dir/alloc.cpp.o CMakeFiles/MiniSTL.dir/test.cpp.o CMakeFiles/MiniSTL.dir/test_vector.cpp.o  -o MiniSTL 

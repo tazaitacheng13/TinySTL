@@ -3,6 +3,7 @@
 #include "alogbase.h"
 #include "allocator.h"
 #include "uninitialized.h"
+#include "construct.h"
 
 #include <cstddef>// ptrdiff_t
 
@@ -189,7 +190,7 @@ namespace mystl {
         void insert(iterator pos, InputIterator first, InputIterator last) {
             insert_dispatch(pos, first, last, is_integral<InputIterator>());
         }
-        void insert(iterator pos, value_type&& value) { emplace(pos, std::move(value)); }
+        iterator insert(iterator pos, value_type&& value) { return emplace(pos, std::move(value)); }
 
     private:// aux_interface for assign
         void fill_assign(size_type, const value_type&);
@@ -203,10 +204,10 @@ namespace mystl {
         }
         template<class InputIterator>
         void assign_aux(InputIterator first, InputIterator last,
-            std::input_iterator_tag);
+            input_iterator_tag);
         template<class ForwardIterator>
         void assign_aux(ForwardIterator first, ForwardIterator last,
-            std::forward_iterator_tag);
+            forward_iterator_tag);
 
     public:// assign
         void assign(size_type n, const value_type& val) { fill_assign(n, val); }
@@ -492,7 +493,7 @@ namespace mystl {
     template<class T, class Alloc>
     template<class InputIterator>
     void vector<T, Alloc>::assign_aux(InputIterator first, InputIterator last,
-        std::input_iterator_tag) {
+        input_iterator_tag) {
         iterator cur = begin();
         for (; first != last && cur != end(); ++cur, ++first) *cur = *first;
         if (first == last)
@@ -504,7 +505,7 @@ namespace mystl {
     template<class T, class Alloc>
     template<class ForwardIterator>
     void vector<T, Alloc>::assign_aux(ForwardIterator first, ForwardIterator last,
-        std::forward_iterator_tag) {
+        forward_iterator_tag) {
         size_type len = mystl::distance(first, last);
         if (len > capacity()) {
             iterator temp = allocate_and_copy(first, last);
@@ -572,10 +573,10 @@ namespace mystl {
     inline typename vector<T, Alloc>::iterator
     vector<T, Alloc>::emplace_back(Args&&... args) {
         if (finish == end_of_storage) {
-            emplace(finish, std::forward(args)...);
+            emplace(finish, std::forward<Args>(args)...);
         }
         else {
-            consturct(finish, std::forward(args)...);
+            construct(finish, std::forward<Args>(args)...);
             ++finish;
         }
     }

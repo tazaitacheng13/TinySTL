@@ -17,4 +17,12 @@ CMakeFiles/MiniSTL.dir/test.cpp.o
  /home/Cplus/MiniSTL/unique_ptr.h
  /home/Cplus/MiniSTL/vector.h
 CMakeFiles/MiniSTL.dir/test_vector.cpp.o
+ /home/Cplus/MiniSTL/alloc.h
+ /home/Cplus/MiniSTL/allocator.h
+ /home/Cplus/MiniSTL/alogbase.h
+ /home/Cplus/MiniSTL/construct.h
+ /home/Cplus/MiniSTL/iterator.h
  /home/Cplus/MiniSTL/test_vector.cpp
+ /home/Cplus/MiniSTL/type_traits.h
+ /home/Cplus/MiniSTL/uninitialized.h
+ /home/Cplus/MiniSTL/vector.h

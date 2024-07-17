@@ -16,5 +16,13 @@ CMakeFiles/MiniSTL.dir/test.cpp.o: ../uninitialized.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../unique_ptr.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../vector.h
 
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../alloc.h
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../allocator.h
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../alogbase.h
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../construct.h
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../iterator.h
 CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../test_vector.cpp
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../type_traits.h
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../uninitialized.h
+CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../vector.h
 

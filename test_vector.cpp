@@ -1,6 +1,7 @@
 #include "vector.h"
 #include <gtest/gtest.h>
-using namespace ::mystl
+#include <vector>
+using namespace ::mystl;
 
 class VectorTest : public testing::Test {
 protected:
@@ -326,4 +327,117 @@ TEST_F(VectorTest, iterators) {
 
     ASSERT_TRUE(vint.rbegin() != vint.rend());
     ASSERT_TRUE(crvint.rbegin() != crvint.rend());
+}
+
+
+TEST_F(VectorTest, emplace) {
+    vector<int> v(10, 0);
+    v.emplace(v.begin() + 3, 1);
+    ASSERT_TRUE(1 == v[3]);
+    ASSERT_TRUE(11 == v.size());
+}
+
+TEST_F(VectorTest, emplace_back) {
+    vector<int> v(10, 0);
+    v.emplace_back(3);
+    ASSERT_TRUE(v.back() == 3);
+    ASSERT_TRUE(11 == v.size());
+}
+
+// 测试push_back的性能，50W条数据用时8ms
+TEST_F(VectorTest, push_back_efficient) {
+    vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.push_back(x);
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+TEST_F(VectorTest, push_back_efficient_move) {
+    vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.push_back(std::move(x));
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+
+// 测试insert的性能，这是一个O(n)的操作，
+TEST_F(VectorTest, insert_efficient) {
+    vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.insert(v.begin(), x);
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+
+TEST_F(VectorTest, insert_efficient_move) {
+    vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.insert(v.begin(), std::move(x));
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+// 测试标准库的insert性能
+TEST_F(VectorTest, insert_efficient_std) {
+    std::vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.insert(v.begin(), x);
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+
+TEST_F(VectorTest, insert_efficient_move_std) {
+    std::vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.insert(v.begin(), std::move(x));
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+// 测试emplace的性能
+TEST_F(VectorTest, emplace_efficient) {
+    std::vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.emplace(v.begin(), x);
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+
+TEST_F(VectorTest, emplace_efficient_move) {
+    std::vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.emplace(v.begin(), std::move(x));
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+TEST_F(VectorTest, emplace_back_efficient) {
+    vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.emplace_back(x);
+    }
+    ASSERT_TRUE(v.size() == 499999);
+}
+
+TEST_F(VectorTest, emplace_back_efficient_move) {
+    vector<int> v;
+    int x = 500000;
+    while (--x) {
+        v.emplace_back(std::move(x));
+    }
+    ASSERT_TRUE(v.size() == 499999);
 }

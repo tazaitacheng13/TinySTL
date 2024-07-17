@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/Cplus/MiniSTL/alloc.cpp
-alloc.h
-/home/Cplus/MiniSTL/alloc.h
-
 /home/Cplus/MiniSTL/alloc.h
 cstdlib
 -
@@ -46,29 +42,13 @@ cstddef
 iostream
 -
 
-/home/Cplus/MiniSTL/shared_ptr.h
-functional
--
-atomic
--
-type_traits.h
-/home/Cplus/MiniSTL/type_traits.h
-
-/home/Cplus/MiniSTL/test.cpp
-shared_ptr.h
-/home/Cplus/MiniSTL/shared_ptr.h
-unique_ptr.h
-/home/Cplus/MiniSTL/unique_ptr.h
+/home/Cplus/MiniSTL/test_vector.cpp
 vector.h
 /home/Cplus/MiniSTL/vector.h
-string
+gtest/gtest.h
 -
-iostream
+vector
 -
-algorithm
--
-
-/home/Cplus/MiniSTL/test_vector.cpp
 
 /home/Cplus/MiniSTL/type_traits.h
 type_traits
@@ -86,14 +66,6 @@ alogbase.h
 cstring
 -
 
-/home/Cplus/MiniSTL/unique_ptr.h
-functional
--
-atomic
--
-type_traits.h
-/home/Cplus/MiniSTL/type_traits.h
-
 /home/Cplus/MiniSTL/vector.h
 alogbase.h
 /home/Cplus/MiniSTL/alogbase.h
@@ -101,6 +73,8 @@ allocator.h
 /home/Cplus/MiniSTL/allocator.h
 uninitialized.h
 /home/Cplus/MiniSTL/uninitialized.h
+construct.h
+/home/Cplus/MiniSTL/construct.h
 cstddef
 -
 

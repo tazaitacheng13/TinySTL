@@ -1242,6 +1242,30 @@
 			"value" : "[/root/anaconda3/lib/cmake/GTest/GTestConfig.cmake][c ][v1.11.0()]"
 		},
 		{
+			"name" : "GTEST_LIB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/local/lib/libgtest.a"
+		},
+		{
+			"name" : "GTEST_MAIN_LIB",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/usr/local/lib/libgtest_main.a"
+		},
+		{
 			"name" : "GTest_DIR",
 			"properties" : 
 			[

@@ -11,7 +11,17 @@
 },
 {
   "directory": "/home/Cplus/MiniSTL/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/MiniSTL.dir/test_vector.cpp.o -c /home/Cplus/MiniSTL/test_vector.cpp",
-  "file": "/home/Cplus/MiniSTL/test_vector.cpp"
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o -c /home/Cplus/MiniSTL/test/test_vector.cpp",
+  "file": "/home/Cplus/MiniSTL/test/test_vector.cpp"
+},
+{
+  "directory": "/home/Cplus/MiniSTL/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/MiniSTL.dir/test/test_list.cpp.o -c /home/Cplus/MiniSTL/test/test_list.cpp",
+  "file": "/home/Cplus/MiniSTL/test/test_list.cpp"
+},
+{
+  "directory": "/home/Cplus/MiniSTL/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o -c /home/Cplus/MiniSTL/test/test_deque.cpp",
+  "file": "/home/Cplus/MiniSTL/test/test_deque.cpp"
 }
 ]

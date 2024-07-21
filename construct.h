@@ -38,7 +38,7 @@ namespace mystl {
     template<class ForwardIterator>
     inline void _destroy_aux(ForwardIterator beg, ForwardIterator end,
         false_type) {
-        for (; beg != end; ++beg) destroy(&*beg);// 毕竟迭代器不是真正的地址
+        for (; beg != end; ++beg) destroy(&*beg); // 取数据，取地址
     }
 
     // 存在trivial destructor

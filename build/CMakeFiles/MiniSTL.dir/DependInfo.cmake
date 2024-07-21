@@ -6,7 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/Cplus/MiniSTL/alloc.cpp" "/home/Cplus/MiniSTL/build/CMakeFiles/MiniSTL.dir/alloc.cpp.o"
   "/home/Cplus/MiniSTL/test.cpp" "/home/Cplus/MiniSTL/build/CMakeFiles/MiniSTL.dir/test.cpp.o"
-  "/home/Cplus/MiniSTL/test_vector.cpp" "/home/Cplus/MiniSTL/build/CMakeFiles/MiniSTL.dir/test_vector.cpp.o"
+  "/home/Cplus/MiniSTL/test/test_deque.cpp" "/home/Cplus/MiniSTL/build/CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o"
+  "/home/Cplus/MiniSTL/test/test_list.cpp" "/home/Cplus/MiniSTL/build/CMakeFiles/MiniSTL.dir/test/test_list.cpp.o"
+  "/home/Cplus/MiniSTL/test/test_vector.cpp" "/home/Cplus/MiniSTL/build/CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

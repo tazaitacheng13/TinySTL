@@ -177,32 +177,86 @@ test.cpp.s:
 	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test.cpp.s
 .PHONY : test.cpp.s
 
-test_vector.o: test_vector.cpp.o
+test/test_deque.o: test/test_deque.cpp.o
 
-.PHONY : test_vector.o
+.PHONY : test/test_deque.o
 
 # target to build an object file
-test_vector.cpp.o:
-	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test_vector.cpp.o
-.PHONY : test_vector.cpp.o
+test/test_deque.cpp.o:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o
+.PHONY : test/test_deque.cpp.o
 
-test_vector.i: test_vector.cpp.i
+test/test_deque.i: test/test_deque.cpp.i
 
-.PHONY : test_vector.i
+.PHONY : test/test_deque.i
 
 # target to preprocess a source file
-test_vector.cpp.i:
-	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test_vector.cpp.i
-.PHONY : test_vector.cpp.i
+test/test_deque.cpp.i:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_deque.cpp.i
+.PHONY : test/test_deque.cpp.i
 
-test_vector.s: test_vector.cpp.s
+test/test_deque.s: test/test_deque.cpp.s
 
-.PHONY : test_vector.s
+.PHONY : test/test_deque.s
 
 # target to generate assembly for a file
-test_vector.cpp.s:
-	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test_vector.cpp.s
-.PHONY : test_vector.cpp.s
+test/test_deque.cpp.s:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_deque.cpp.s
+.PHONY : test/test_deque.cpp.s
+
+test/test_list.o: test/test_list.cpp.o
+
+.PHONY : test/test_list.o
+
+# target to build an object file
+test/test_list.cpp.o:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_list.cpp.o
+.PHONY : test/test_list.cpp.o
+
+test/test_list.i: test/test_list.cpp.i
+
+.PHONY : test/test_list.i
+
+# target to preprocess a source file
+test/test_list.cpp.i:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_list.cpp.i
+.PHONY : test/test_list.cpp.i
+
+test/test_list.s: test/test_list.cpp.s
+
+.PHONY : test/test_list.s
+
+# target to generate assembly for a file
+test/test_list.cpp.s:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_list.cpp.s
+.PHONY : test/test_list.cpp.s
+
+test/test_vector.o: test/test_vector.cpp.o
+
+.PHONY : test/test_vector.o
+
+# target to build an object file
+test/test_vector.cpp.o:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o
+.PHONY : test/test_vector.cpp.o
+
+test/test_vector.i: test/test_vector.cpp.i
+
+.PHONY : test/test_vector.i
+
+# target to preprocess a source file
+test/test_vector.cpp.i:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_vector.cpp.i
+.PHONY : test/test_vector.cpp.i
+
+test/test_vector.s: test/test_vector.cpp.s
+
+.PHONY : test/test_vector.s
+
+# target to generate assembly for a file
+test/test_vector.cpp.s:
+	$(MAKE) -f CMakeFiles/MiniSTL.dir/build.make CMakeFiles/MiniSTL.dir/test/test_vector.cpp.s
+.PHONY : test/test_vector.cpp.s
 
 # Help Target
 help:
@@ -219,9 +273,15 @@ help:
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
-	@echo "... test_vector.o"
-	@echo "... test_vector.i"
-	@echo "... test_vector.s"
+	@echo "... test/test_deque.o"
+	@echo "... test/test_deque.i"
+	@echo "... test/test_deque.s"
+	@echo "... test/test_list.o"
+	@echo "... test/test_list.i"
+	@echo "... test/test_list.s"
+	@echo "... test/test_vector.o"
+	@echo "... test/test_vector.i"
+	@echo "... test/test_vector.s"
 .PHONY : help
 
 

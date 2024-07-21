@@ -83,36 +83,66 @@ CMakeFiles/MiniSTL.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MiniSTL.dir/test.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Cplus/MiniSTL/test.cpp -o CMakeFiles/MiniSTL.dir/test.cpp.s
 
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: CMakeFiles/MiniSTL.dir/flags.make
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../test_vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Cplus/MiniSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MiniSTL.dir/test_vector.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniSTL.dir/test_vector.cpp.o -c /home/Cplus/MiniSTL/test_vector.cpp
+CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o: CMakeFiles/MiniSTL.dir/flags.make
+CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o: ../test/test_vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Cplus/MiniSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o -c /home/Cplus/MiniSTL/test/test_vector.cpp
 
-CMakeFiles/MiniSTL.dir/test_vector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MiniSTL.dir/test_vector.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Cplus/MiniSTL/test_vector.cpp > CMakeFiles/MiniSTL.dir/test_vector.cpp.i
+CMakeFiles/MiniSTL.dir/test/test_vector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MiniSTL.dir/test/test_vector.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Cplus/MiniSTL/test/test_vector.cpp > CMakeFiles/MiniSTL.dir/test/test_vector.cpp.i
 
-CMakeFiles/MiniSTL.dir/test_vector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MiniSTL.dir/test_vector.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Cplus/MiniSTL/test_vector.cpp -o CMakeFiles/MiniSTL.dir/test_vector.cpp.s
+CMakeFiles/MiniSTL.dir/test/test_vector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MiniSTL.dir/test/test_vector.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Cplus/MiniSTL/test/test_vector.cpp -o CMakeFiles/MiniSTL.dir/test/test_vector.cpp.s
+
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: CMakeFiles/MiniSTL.dir/flags.make
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../test/test_list.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Cplus/MiniSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MiniSTL.dir/test/test_list.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniSTL.dir/test/test_list.cpp.o -c /home/Cplus/MiniSTL/test/test_list.cpp
+
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MiniSTL.dir/test/test_list.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Cplus/MiniSTL/test/test_list.cpp > CMakeFiles/MiniSTL.dir/test/test_list.cpp.i
+
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MiniSTL.dir/test/test_list.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Cplus/MiniSTL/test/test_list.cpp -o CMakeFiles/MiniSTL.dir/test/test_list.cpp.s
+
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: CMakeFiles/MiniSTL.dir/flags.make
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../test/test_deque.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/Cplus/MiniSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o -c /home/Cplus/MiniSTL/test/test_deque.cpp
+
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MiniSTL.dir/test/test_deque.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Cplus/MiniSTL/test/test_deque.cpp > CMakeFiles/MiniSTL.dir/test/test_deque.cpp.i
+
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MiniSTL.dir/test/test_deque.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Cplus/MiniSTL/test/test_deque.cpp -o CMakeFiles/MiniSTL.dir/test/test_deque.cpp.s
 
 # Object files for target MiniSTL
 MiniSTL_OBJECTS = \
 "CMakeFiles/MiniSTL.dir/alloc.cpp.o" \
 "CMakeFiles/MiniSTL.dir/test.cpp.o" \
-"CMakeFiles/MiniSTL.dir/test_vector.cpp.o"
+"CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o" \
+"CMakeFiles/MiniSTL.dir/test/test_list.cpp.o" \
+"CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o"
 
 # External object files for target MiniSTL
 MiniSTL_EXTERNAL_OBJECTS =
 
 MiniSTL: CMakeFiles/MiniSTL.dir/alloc.cpp.o
 MiniSTL: CMakeFiles/MiniSTL.dir/test.cpp.o
-MiniSTL: CMakeFiles/MiniSTL.dir/test_vector.cpp.o
+MiniSTL: CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o
+MiniSTL: CMakeFiles/MiniSTL.dir/test/test_list.cpp.o
+MiniSTL: CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o
 MiniSTL: CMakeFiles/MiniSTL.dir/build.make
 MiniSTL: /usr/local/lib/libgtest.a
 MiniSTL: /usr/local/lib/libgtest_main.a
 MiniSTL: CMakeFiles/MiniSTL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Cplus/MiniSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable MiniSTL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/Cplus/MiniSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MiniSTL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MiniSTL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

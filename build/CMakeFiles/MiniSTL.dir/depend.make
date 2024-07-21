@@ -8,7 +8,9 @@ CMakeFiles/MiniSTL.dir/test.cpp.o: ../alloc.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../allocator.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../alogbase.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../construct.h
+CMakeFiles/MiniSTL.dir/test.cpp.o: ../deque.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../iterator.h
+CMakeFiles/MiniSTL.dir/test.cpp.o: ../list.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../shared_ptr.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../test.cpp
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../type_traits.h
@@ -16,13 +18,24 @@ CMakeFiles/MiniSTL.dir/test.cpp.o: ../uninitialized.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../unique_ptr.h
 CMakeFiles/MiniSTL.dir/test.cpp.o: ../vector.h
 
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../alloc.h
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../allocator.h
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../alogbase.h
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../construct.h
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../iterator.h
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../test_vector.cpp
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../type_traits.h
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../uninitialized.h
-CMakeFiles/MiniSTL.dir/test_vector.cpp.o: ../vector.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../alloc.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../allocator.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../alogbase.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../construct.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../deque.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../iterator.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../test/test_deque.cpp
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../type_traits.h
+CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o: ../uninitialized.h
+
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../alloc.h
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../allocator.h
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../alogbase.h
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../construct.h
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../iterator.h
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../list.h
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../test/test_list.cpp
+CMakeFiles/MiniSTL.dir/test/test_list.cpp.o: ../type_traits.h
+
+CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o: ../test/test_vector.cpp
 

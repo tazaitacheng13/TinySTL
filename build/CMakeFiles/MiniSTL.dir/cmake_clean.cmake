@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MiniSTL.dir/alloc.cpp.o"
   "CMakeFiles/MiniSTL.dir/test.cpp.o"
-  "CMakeFiles/MiniSTL.dir/test_vector.cpp.o"
+  "CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o"
+  "CMakeFiles/MiniSTL.dir/test/test_list.cpp.o"
+  "CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o"
   "MiniSTL"
   "MiniSTL.pdb"
 )

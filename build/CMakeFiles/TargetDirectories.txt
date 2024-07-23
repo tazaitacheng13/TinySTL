@@ -1,3 +1,0 @@
-/home/Cplus/MiniSTL/build/CMakeFiles/rebuild_cache.dir
-/home/Cplus/MiniSTL/build/CMakeFiles/edit_cache.dir
-/home/Cplus/MiniSTL/build/CMakeFiles/MiniSTL.dir

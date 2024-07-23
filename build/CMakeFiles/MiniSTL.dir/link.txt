@@ -1,1 +1,0 @@
-/usr/bin/g++  -g   CMakeFiles/MiniSTL.dir/alloc.cpp.o CMakeFiles/MiniSTL.dir/test.cpp.o CMakeFiles/MiniSTL.dir/test/test_vector.cpp.o CMakeFiles/MiniSTL.dir/test/test_list.cpp.o CMakeFiles/MiniSTL.dir/test/test_deque.cpp.o  -o MiniSTL  /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a -lpthread 

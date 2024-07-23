@@ -1,6 +1,7 @@
 #pragma once
 #include <functional>
 #include <atomic>
+#include "algobase.h"
 #include "type_traits.h"
 
 
@@ -24,7 +25,7 @@ public: // 禁用拷贝
 	unique_ptr& operator=(const unique_ptr& other) = delete;
 
 public: // 可以移动
-	unique_ptr(const unique_ptr&& other) noexcept : ptr(other.ptr), deleter(std::move(other.deleter)) { other.ptr = nullptr; };
+	unique_ptr(const unique_ptr&& other) noexcept : ptr(other.ptr), deleter(mystl::move(other.deleter)) { other.ptr = nullptr; };
 	unique_ptr& operator=(unique_ptr&& rhs) noexcept;
 
 public: // 重载=nullptr
@@ -62,10 +63,10 @@ template<class T, class D>
 inline unique_ptr<T, D>& unique_ptr<T, D>::operator=(unique_ptr<T, D>&& other) noexcept {
 	if (ptr != other.ptr) {
 		reset(other.ptr);
-		deleter = std::move(other.deleter);
+		deleter = mystl::move(other.deleter);
 		other.ptr = nullptr;
 	}
-	deleter = std::move(other.deleter);
+	deleter = mystl::move(other.deleter);
 	return *this;
 }
 

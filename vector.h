@@ -1,6 +1,6 @@
 #pragma once
 
-#include "alogbase.h"
+#include "algobase.h"
 #include "allocator.h"
 #include "uninitialized.h"
 #include "construct.h"
@@ -155,7 +155,7 @@ namespace mystl {
             --finish;
             destroy(finish);
         }
-        void push_back(value_type&& value) { emplace_back(std::move(value)); }          // 移动数据
+        void push_back(value_type&& value) { emplace_back(mystl::move(value)); }          // 移动数据
 
     public:// erase
         iterator erase(iterator, iterator);
@@ -190,7 +190,7 @@ namespace mystl {
         void insert(iterator pos, InputIterator first, InputIterator last) {
             insert_dispatch(pos, first, last, is_integral<InputIterator>());
         }
-        iterator insert(iterator pos, value_type&& value) { return emplace(pos, std::move(value)); }
+        iterator insert(iterator pos, value_type&& value) { return emplace(pos, mystl::move(value)); }
 
     private:// aux_interface for assign
         void fill_assign(size_type, const value_type&);
@@ -532,7 +532,7 @@ namespace mystl {
     inline typename vector<T, Alloc>::iterator vector<T, Alloc>::emplace(iterator pos, Args&&... args) {
         const size_type n = pos - start;
         if (finish != end_of_storage && pos == finish) {
-            construct(pos, std::forward<Args>(args)...);
+            construct(pos, mystl::forward<Args>(args)...);
             ++finish;
         }
         else if (finish != end_of_storage) {
@@ -540,7 +540,7 @@ namespace mystl {
             construct(finish, *(finish - 1));
             ++new_end;
             mystl::copy_backward(pos, finish - 1, finish);
-            construct(pos, std::forward<Args>(args)...);
+            construct(pos, mystl::forward<Args>(args)...);
             finish = new_end;
         }
         else { // reallocate and emplace
@@ -550,7 +550,7 @@ namespace mystl {
             iterator new_finish = new_start;
             try {
                 new_finish = mystl::uninitialized_copy(start, pos, new_start);
-                construct(new_finish, std::forward<Args>(args)...);
+                construct(new_finish, mystl::forward<Args>(args)...);
                 ++new_finish;
                 new_finish = mystl::uninitialized_copy(pos, finish, new_finish);
             }
@@ -573,12 +573,13 @@ namespace mystl {
     inline typename vector<T, Alloc>::iterator
     vector<T, Alloc>::emplace_back(Args&&... args) {
         if (finish == end_of_storage) {
-            emplace(finish, std::forward<Args>(args)...);
+            emplace(finish, mystl::forward<Args>(args)...);
         }
         else {
-            construct(finish, std::forward<Args>(args)...);
+            construct(finish, mystl::forward<Args>(args)...);
             ++finish;
         }
+        return finish;
     }
 
 

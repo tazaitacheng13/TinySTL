@@ -374,8 +374,8 @@ namespace mystl {
 
     public: // move operation
         deque(deque&& rhs) noexcept
-            :begin_(std::move(rhs.begin_)),
-            end_(std::move(rhs.end_)),
+            :begin_(mystl::move(rhs.begin_)),
+            end_(mystl::move(rhs.end_)),
             map_(rhs.map_),
             map_size_(rhs.map_size_)
         {
@@ -428,8 +428,8 @@ namespace mystl {
         void pop_back();
         void pop_front();
 
-        void     push_front(value_type&& value) { emplace_front(std::move(value)); }
-        void     push_back(value_type&& value)  { emplace_back(std::move(value)); }
+        void     push_front(value_type&& value) { emplace_front(mystl::move(value)); }
+        void     push_back(value_type&& value)  { emplace_back(mystl::move(value)); }
 
     private:// aux_interface for assign
         void fill_assign(size_type, const value_type &);
@@ -532,8 +532,8 @@ namespace mystl {
     deque<T, Alloc>& deque<T, Alloc>::operator=(deque&& rhs)
     {
         clear();
-        begin_ = std::move(rhs.begin_);
-        end_ = std::move(rhs.end_);
+        begin_ = mystl::move(rhs.begin_);
+        end_ = mystl::move(rhs.end_);
         map_ = rhs.map_;
         map_size_ = rhs.map_size_;
         rhs.map_ = nullptr;
@@ -824,19 +824,19 @@ namespace mystl {
     {
         if (position.cur == begin_.cur)
         {
-            emplace_front(std::move(value));
+            emplace_front(mystl::move(value));
             return begin_;
         }
         else if (position.cur == end_.cur)
         {
-            emplace_back(std::move(value));
+            emplace_back(mystl::move(value));
             auto tmp = end_;
             --tmp;
             return tmp;
         }
         else
         {
-            return insert_aux(position, std::move(value));
+            return insert_aux(position, mystl::move(value));
         }
     }
 
@@ -980,14 +980,14 @@ namespace mystl {
     template<class... Args>
     void deque<T, Alloc>::emplace_front(Args&&...args) {
         if (begin_.cur != begin_.first) {
-            construct(begin_.cur - 1, std::forward<Args>(args)...);
+            construct(begin_.cur - 1, mystl::forward<Args>(args)...);
             --begin_.cur;
         }
         else {
             require_capacity(1, true);
             try {
                 --begin_;
-                construct(begin_.cur, std::forward<Args>(args)...);
+                construct(begin_.cur, mystl::forward<Args>(args)...);
             } catch(...) {
                 ++begin_;
                 throw;
@@ -1000,12 +1000,12 @@ namespace mystl {
     template<class... Args>
     void deque<T, Alloc>::emplace_back(Args&&...args) {
         if (end_.cur != end_.last - 1) {
-            construct(end_.cur, std::forward<Args>(args)...);
+            construct(end_.cur, mystl::forward<Args>(args)...);
             ++end_.cur;
         }
         else {
             require_capacity(1, false);
-            construct(end_.cur, std::forward<Args>(args)...);
+            construct(end_.cur, mystl::forward<Args>(args)...);
             ++end_;
         }
     }
@@ -1017,15 +1017,15 @@ namespace mystl {
     {
         if (pos.cur == begin_.cur)
         {
-            emplace_front(std::forward<Args>(args)...);
+            emplace_front(mystl::forward<Args>(args)...);
             return begin_;
         }
         else if (pos.cur == end_.cur)
         {
-            emplace_back(std::forward<Args>(args)...);
+            emplace_back(mystl::forward<Args>(args)...);
             return end_ - 1;
         }
-        return insert_aux(pos, std::forward<Args>(args)...);
+        return insert_aux(pos, mystl::forward<Args>(args)...);
     }
 
 
@@ -1140,7 +1140,7 @@ namespace mystl {
     deque<T, Alloc>::insert_aux(iterator position, Args&& ...args)
     {
         const size_type elems_before = position - begin_;
-        value_type value_copy = value_type(std::forward<Args>(args)...);
+        value_type value_copy = value_type(mystl::forward<Args>(args)...);
         if (elems_before < (size() / 2))
         { // 在前半段插入
             emplace_front(front());
@@ -1163,7 +1163,7 @@ namespace mystl {
             position = begin_ + elems_before;
             mystl::copy_backward(position, back2, back1);
         }
-        *position = std::move(value_copy);
+        *position = mystl::move(value_copy);
         return position;
     }
 

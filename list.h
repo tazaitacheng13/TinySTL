@@ -1,6 +1,6 @@
 #pragma
 #include "iterator.h"
-#include "alogbase.h"
+#include "algobase.h"
 #include "type_traits.h"
 #include "allocator.h"
 
@@ -285,11 +285,11 @@ namespace mystl {
     public: // 添加与删除
         void push_back(const value_type& val) {insert(end(), val);}
 
-        void push_back(const value_type&& val) {emplace_back(std::move(val));}
+        void push_back(const value_type&& val) {emplace_back(mystl::move(val));}
 
         void push_front(const value_type& val) {insert(begin(), val);}
 
-        void push_front(const value_type&& val) { emplace_front(std::move(val)); }
+        void push_front(const value_type&& val) { emplace_front(mystl::move(val)); }
 
         void pop_front() { iterator cur = begin(); erase(cur); }
         void pop_back() {
@@ -327,7 +327,7 @@ namespace mystl {
     list<T, Alloc>::create_node(Args&&... args) {
         list_node *p = get_node();
         try {
-            construct(&p->data, std::forward<Args>(args)...);
+            construct(&p->data, mystl::forward<Args>(args)...);
         } catch (std::exception) {
             rm_node(p);
             throw;
@@ -421,7 +421,7 @@ namespace mystl {
     template<class T, class Alloc>
     typename list<T, Alloc>::iterator
     list<T, Alloc>::insert(iterator pos, const value_type&& val) {
-        list_node * temp = create_node(std::move(val));
+        list_node * temp = create_node(mystl::move(val));
         temp->next = pos.node;
         temp->prev = pos.node->prev;
         pos.node->prev->next = temp;
@@ -446,7 +446,7 @@ namespace mystl {
     template<class T, class Alloc>
     template<class... Args>
     inline void list<T, Alloc>::emplace(iterator pos, Args&&... args) {
-        list_node* p = create_node(std::forward<Args>(args)...);
+        list_node* p = create_node(mystl::forward<Args>(args)...);
         p->prev = pos.node->prev;
         p->next = pos.node;
         pos.node->prev->next = p;
@@ -457,7 +457,7 @@ namespace mystl {
     template<class T, class Alloc>
     template<class... Args>
     void list<T, Alloc>::emplace_front(Args&&... args) {
-        list_node* p = create_node(std::forward<Args>(args)...);
+        list_node* p = create_node(mystl::forward<Args>(args)...);
         iterator pos = begin();
         p->prev = pos.node->prev;
         p->next = pos.node;
@@ -469,7 +469,7 @@ namespace mystl {
     template<class T, class Alloc>
     template<class... Args>
     void list<T, Alloc>::emplace_back(Args&&... args) {
-        list_node* p = create_node(std::forward<Args>(args)...);
+        list_node* p = create_node(mystl::forward<Args>(args)...);
         iterator pos = end();
         p->prev = pos.node->prev;
         p->next = pos.node;

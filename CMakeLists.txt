@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(MiniSTL VERSION 0.1.0 LANGUAGES C CXX)
 
-add_executable(MiniSTL alloc.cpp test.cpp test/test_vector.cpp list.h test/test_list.cpp test/test_deque.cpp)
+file(GLOB TEST_SOURCES test/*.cpp)
+add_executable(MiniSTL alloc.cpp test.cpp ${TEST_SOURCES})
 
 # 添加gtest路径
 set(GTEST_ROOT /usr/local/)

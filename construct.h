@@ -1,6 +1,7 @@
 #pragma once
 
 #include "type_traits.h"
+#include "algobase.h"
 #include <new>// placement new
 
 
@@ -19,7 +20,7 @@ namespace mystl {
 
     template<class T1, class... Args>
     inline void construct(T1* ptr, Args&&... args) {
-        new (ptr) T1(std::forward<Args>(args)...);
+        new (ptr) T1(mystl::forward<Args>(args)...);
     }
 
     template<class T>

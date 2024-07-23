@@ -229,7 +229,7 @@ TEST_F(ListTest, push_back_perfermance) {
     int n = 500000;
     list<int> lst1;
     while (--n) {
-        lst1.push_back(std::move(n));
+        lst1.push_back(mystl::move(n));
     }
     ASSERT_TRUE(lst1.size() == 499999);
 }

@@ -243,4 +243,22 @@ namespace mystl {
         return iter_swap(a, b, value_type_t<ForwardIterator1>());
     }
 
+    template<typename T>
+    auto move(T &&param) -> decltype(static_cast<remove_reference_t<T> &&>(param)) {
+        using ReturnType = remove_reference_t<T> &&;
+        return static_cast<ReturnType>(param);
+    }
+
+
+    template<typename T>
+    T &&forward(remove_reference_t<T> & param) {
+        return static_cast<T &&>(param);
+    }
+
+    template<typename T>
+    T &&forward(remove_reference_t<T> && param) {
+        return static_cast<T &&>(param);
+    }
+
+    
 }

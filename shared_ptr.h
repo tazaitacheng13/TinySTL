@@ -3,6 +3,7 @@
 
 #include <functional>
 #include <atomic>
+#include "algobase.h"
 #include "type_traits.h"
 
 
@@ -24,7 +25,7 @@ public:
     shared_ptr& operator=(const shared_ptr& rhs);
 
     // 移动构造函数
-    shared_ptr(const shared_ptr&& other) : ptr(other.ptr), ref_count(other.ref_count), deleter(std::move(other.del)) {
+    shared_ptr(const shared_ptr&& other) : ptr(other.ptr), ref_count(other.ref_count), deleter(mystl::move(other.del)) {
         other.ptr = nullptr;
         other.ref_count = nullptr;
     }

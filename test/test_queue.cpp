@@ -1,8 +1,6 @@
 #include "../list.h"
 #include "../queue.h"
 #include "../algobase.h"
-#include "../priority_queue.h"
-
 #include <gtest/gtest.h>
 #include <string>
 

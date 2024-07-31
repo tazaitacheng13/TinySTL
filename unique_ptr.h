@@ -4,7 +4,6 @@
 #include "algobase.h"
 #include "type_traits.h"
 
-
 namespace mystl
 {
 
@@ -25,7 +24,7 @@ public: // 禁用拷贝
 	unique_ptr& operator=(const unique_ptr& other) = delete;
 
 public: // 可以移动
-	unique_ptr(const unique_ptr&& other) noexcept : ptr(other.ptr), deleter(mystl::move(other.deleter)) { other.ptr = nullptr; };
+	unique_ptr(unique_ptr&& other) noexcept : ptr(other.ptr), deleter(mystl::move(other.deleter)) { other.ptr = nullptr; };
 	unique_ptr& operator=(unique_ptr&& rhs) noexcept;
 
 public: // 重载=nullptr

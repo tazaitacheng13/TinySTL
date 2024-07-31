@@ -742,6 +742,27 @@ namespace mystl {
 
     // ------------------------------push pop方法-------------------------------------------
 
+
+    // 在头部插入元素
+    template<class T, class Alloc>
+    void deque<T, Alloc>::push_front(const value_type& value) {
+        if (begin_.cur != begin_.first) {
+            construct(begin_.cur - 1, value);
+            --begin_.cur;
+        }
+        else {
+            require_capacity(1, true);
+            try {
+                construct(begin_.cur, value);
+            } catch(...)
+            {
+                ++begin_;
+                destroy_nodes(begin_.node - 1, begin_.node - 1);
+                throw;
+            }
+        }
+    }
+
     // 在尾部插入元素
     template <class T, class Alloc>
     void deque<T, Alloc>::push_back(const value_type& value)
